@@ -150,7 +150,7 @@ class DBManager: DBManagerProtocol {
         }
     }
     
-    func clearLocalDataForUITests() {
+    func clearLocalDataForUITests() { //usuwa cache z aplikacji
         if ProcessInfo().arguments.contains("clearLocalData") {
             UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
         }
